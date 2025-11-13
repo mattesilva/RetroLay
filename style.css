@@ -1,0 +1,995 @@
+/* Layout >>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+/* Variáveis */
+:root {
+    --RoxoEscuro: #3f0045;
+    --Branco: #ffffff;
+    --Roxo: #4d008e;
+    --RoxoRosa: #8e00ad;
+    --Preto: #000000;
+}
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container {
+    display: flex;
+    margin: 0 auto;
+}
+
+.btn {
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+    background-color: var(--RoxoEscuro);
+    padding: 10px 40px;
+    color: var(--Branco);
+    border-radius: 25px;
+    border: 2px solid var(--RoxoRosa);
+    text-shadow:
+        -1px -1px 0 #000000,
+        1px -1px 0 #000000,
+        -1px 1px 0 #8e00ad,
+        1px 3px 0 #8e00ad;
+}
+
+/* Cartão */
+
+.card {
+    width: 341.5px;
+    right: 520px;
+    background-color: var(--RoxoEscuro);
+    margin-bottom: 30px;
+    border: 2px solid var(--RoxoEscuro);
+    text-align: center;
+    border-radius: 25px;
+}
+
+.card img {
+    border-radius: 25px 25px 0px 0px;
+}
+
+.card h2 {
+    font-size: 1.3rem;
+    margin: 15px 0px;
+    color: var(--Branco);
+    text-shadow:
+        -1px -1px 0 #000000,
+        1px -1px 0 #000000,
+        -1px 1px 0 #8e00ad,
+        1px 3px 0 #8e00ad;
+}
+
+.card p {
+    color: var(--Branco);
+    font-size: 0.90rem;
+    text-align: center;
+    padding: 0px 15px 20px 15px;
+}
+
+
+/* Topo do site */
+
+#topo {
+    position: fixed;
+    right: 15px;
+    bottom: 10px;
+}
+
+/* Scroll suave */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Fim - Layout<<<<<<<<<<<<<<<<<<<<<<*/
+
+
+/* Smartphone Portrait >>>>>>>>>>>>>>*/
+
+/* Cabeçalho */
+header {
+    height: 78px;
+    background-color: rgba(63, 0, 69, 1.0);
+}
+
+#logo img {
+    width: 64px;
+    height: 64px;
+    margin-top: 10%;
+    margin-left: 10px;
+    border-radius: 25px;
+    border: 4px solid var(--RoxoRosa);
+}
+
+#check {
+    display: none;
+}
+
+label {
+    color: rgba(0, 0, 0, 0.75);
+    font-size: 2rem;
+    background-color: #8e00ad;
+    display: inline;
+    position: fixed;
+    right: 5px;
+    top: 15px;
+}
+
+nav ul {
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 78px;
+    right: -65%;
+    width: 65%;
+    transition: all 0.5s;
+}
+
+/* Ação para a caixa do checkbox */
+/* Quando selecionado mudar propriedades ulo */
+
+#check:checked~ul {
+    right: 0px;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--RoxoRosa);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--Branco)
+}
+
+/* Principal */
+
+main {
+    height: 90vh;
+    background: url(./img/page.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+main .container {
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main h1 {
+    color: var(--Branco);
+    font-family: "Lilita One", sans-serif;
+    text-shadow:
+        -1px -1px 0 #000000,
+        1px -1px 0 #000000,
+        -1px 1px 0 #8e00ad,
+        1px 3px 0 #8e00ad;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+main h2 {
+    color: var(--Branco);
+    font-size: 1.60rem;
+    font-weight: 700;
+    text-shadow:
+        -1px -1px 0 #000000,
+        1px -1px 0 #000000,
+        -1px 1px 0 #8e00ad,
+        1px 3px 0 #8e00ad;
+    margin-bottom: 10px;
+}
+
+/* Destaque */
+
+#destaque {
+    padding: 50px 10px;
+    background: url(./img/projetofundo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#destaque .container {
+    flex-direction: column;
+}
+
+#hero {
+    text-align: center;
+}
+
+#hero img {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 35px;
+}
+
+#hero-text h2 {
+    margin-bottom: 15px;
+    color: var(--Branco);
+    text-shadow:
+        -1px -1px 0 #000000,
+        1px -1px 0 #000000,
+        -1px 1px 0 #8e00ad,
+        1px 3px 0 #8e00ad;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+#hero-text p {
+    color: var(--Branco);
+}
+
+.topics {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.topics p {
+    margin-left: 15px;
+    color: var(--Branco);
+}
+
+/* Onepage */
+
+#onepage {
+    padding: 50px 10px;
+    background: url(./img/arcade2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#onepage .container {
+    display: flex;
+    flex-direction: column;
+}
+
+#onepage iframe {
+    width: 340px;
+    height: 191px;
+}
+
+#onepage h2 {
+    margin-bottom: 25px;
+    color: var(--Branco);
+    text-shadow:
+        -1px -1px 0 #000000,
+        1px -1px 0 #000000,
+        -1px 1px 0 #8e00ad,
+        1px 3px 0 #8e00ad;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+#onepage p {
+    margin-bottom: 30px;
+}
+
+#onepage p {
+    margin-bottom: 15px;
+    color: var(--Branco);
+    font-size: 1.20rem;
+}
+
+#texto {
+    text-align: center;
+}
+
+/* PDF */
+
+#roms {
+    padding: 40px 13px;
+    background: url(./img/projetofundo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#roms .container {
+    display: flex;
+    flex-direction: column;
+}
+
+#roms img {
+    display: none;
+}
+
+#roms h2 {
+    color: var(--Branco);
+    margin-bottom: 15px;
+    font-size: 2.50rem;
+    text-shadow:
+        -1px -1px 0 #000000,
+        1px -1px 0 #000000,
+        -1px 1px 0 #8e00ad,
+        1px 3px 0 #8e00ad;
+    margin-bottom: 10px;
+}
+
+#roms p {
+    margin-bottom: 50px;
+    color: var(--Branco);
+    font-size: 1.2rem;
+}
+
+#roms .btn {
+    font-size: 1.3rem;
+}
+
+/* Cartões */
+
+#listerom {
+    background: url(./img/gamelog.jpg);
+    padding: 50px 0px 25px 0px;
+}
+
+#listerom .container {
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Contato */
+
+#contato {
+    padding: 40px 13px;
+    background: url(./img/projetofundo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#contato .container {
+    display: flex;
+    flex-direction: column;
+}
+
+#Discord img {
+    display: none;
+}
+
+#contato p {
+    color: var(--Branco);
+    margin-bottom: 15px;
+    font-size: 1.90rem;
+    text-shadow:
+        -1px -1px 0 #000000,
+        1px -1px 0 #000000,
+        -1px 1px 0 #8e00ad,
+        1px 3px 0 #8e00ad;
+    margin-bottom: 10px;
+}
+
+#contato a {
+    text-decoration: none;
+}
+
+/* Rodapé */
+
+#fim {
+    padding: 40px 13px;
+    background: var(--RoxoRosa);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#fim .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+}
+
+#fim img {
+    margin-left: 20px;
+}
+
+#fim p {
+    color: var(--Branco);
+    margin-bottom: 15px;
+    font-size: 1.0rem;
+    text-shadow:
+        -1px -1px 0 #000000,
+        1px -1px 0 #000000,
+        -1px 1px 0 #8e00ad,
+        1px 3px 0 #8e00ad;
+    font-size: 1.25rem;
+}
+
+#fim .icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+}
+
+#fim a {
+    display: inline-block;
+}
+
+#texto {
+    text-align: center;
+}
+
+/* PDF */
+
+#roms {
+    padding: 40px 13px;
+    background: url(./img/projetofundo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#roms .container {
+    display: flex;
+    flex-direction: column;
+}
+
+#roms img {
+    display: none;
+}
+
+#roms h2 {
+    color: var(--Branco);
+    margin-bottom: 15px;
+    font-size: 2.50rem;
+    text-shadow:
+        -1px -1px 0 #000000,
+        1px -1px 0 #000000,
+        -1px 1px 0 #8e00ad,
+        1px 3px 0 #8e00ad;
+    margin-bottom: 10px;
+}
+
+#roms p {
+    margin-bottom: 50px;
+    color: var(--Branco);
+    font-size: 1.2rem;
+}
+
+#roms .btn {
+    font-size: 1.3rem;
+}
+
+
+/* Fim - Smartphone Portrait <<<<<<< */
+
+/* Smartphone Landscape >>>>>>>>>>>> */
+@media (min-width: 576px) {
+
+    #destaque {
+        background-attachment: fixed;
+    }
+
+    /* Layout */
+    .container {
+        max-width: 540px;
+    }
+
+    /* Cabeçalho */
+    nav ul {
+        width: 40%;
+        right: -40%;
+    }
+
+    /* Principal */
+    main {
+        height: 75vh;
+    }
+
+    main h1 {
+        font-size: 2.75rem;
+    }
+
+    main h2 {
+        font-size: 2.25rem;
+    }
+
+    /* Destaque */
+
+    #destaque {
+        padding: 50px 0px;
+    }
+
+    #destaque .container {
+        flex-direction: row;
+    }
+
+    #hero {
+        text-align: left;
+    }
+
+    #hero img {
+        width: 150px;
+        height: 150px;
+        margin: 0px 50px 0px 0px;
+    }
+
+    .topics {
+        display: none;
+    }
+
+    /* Onepage */
+
+    #onepage {
+        padding: 50px 0px;
+    }
+
+    #texto {
+        text-align: center;
+    }
+
+    #video iframe {
+        width: 500px;
+        height: 315px;
+        margin-left: 20px;
+    }
+
+    /* Roms */
+
+    #roms {
+        padding: 50px 0px;
+        background-attachment: fixed;
+    }
+
+    #sobre {
+        text-align: center;
+    }
+
+    /* Contato */
+
+    #contato {
+        text-align: center;
+    }
+
+    /* Rodapé */
+
+    #fim {
+        text-align: center;
+    }
+
+    #fim img {
+        margin-left: 90px;
+    }
+
+    #fim .icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+}
+
+#fim a {
+    display: inline-block;
+}
+
+#texto {
+    text-align: center;
+}
+
+}
+
+
+/* Fim - Smartphone Landscape <<<<<< */
+
+
+/* Tablet Portrait >>>>>>>>>>>>>>>>> */
+@media (min-width: 768px) {
+
+    /* Layout */
+
+    .container {
+        max-width: 720px;
+    }
+
+    /* Principal */
+
+    main h1 {
+        font-size: 3.9rem;
+    }
+
+    main h2 {
+        font-size: 3rem;
+    }
+
+    #hero-text h2 {
+        font-size: 2.7rem;
+    }
+
+    #hero-text p {
+        font-size: 1.5rem;
+    }
+
+    /* Onepage */
+
+    #onepage h2 {
+        font-size: 2.70rem;
+    }
+
+    #onepage p {
+        font-size: 2.50rem;
+    }
+
+    #video iframe {
+        width: 560px;
+        height: 315px;
+        margin-left: 20px;
+    }
+
+    /* ROMS */
+
+    #roms h2 {
+        font-size: 2.70rem;
+    }
+
+    #roms p {
+        font-size: 2.50rem;
+    }
+
+    /* ROMS */
+
+    #roms {
+        background-attachment: fixed;
+    }
+
+    /* Contato */
+
+    #contato {
+        background-attachment: fixed;
+    }
+
+    /* Rodapé */
+
+    #fim {
+        text-align: center;
+    }
+
+    #fim p {
+        font-size: 1.5rem;
+    }
+
+    #fim img {
+        margin-left: 150px;
+    }
+
+    #fim .icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+}
+
+#fim a {
+    display: inline-block;
+}
+
+#texto {
+    text-align: center;
+}
+
+}
+
+/* Fim - Tablet Portrait <<<<<<<<<<< */
+
+
+/* Tablet Landscape >>>>>>>>>>>>>>>> */
+@media (min-width: 992px) {
+
+    /* Layout */
+    .container {
+        max-width: 960px;
+    }
+
+    #hero-text h2 {
+        font-size: 2.7rem;
+    }
+
+    #hero-text p {
+        font-size: 1.5rem;
+    }
+
+    /* Onepage */
+
+    #onepage h2 {
+        font-size: 2.7rem;
+    }
+
+    #onepage p {
+        font-size: 1.5rem;
+    }
+
+    #video iframe {
+        width: 560px;
+        height: 315px;
+        margin-left: 20px;
+    }
+
+    /* Roms */
+
+    #roms {
+        background-attachment: fixed;
+    }
+
+    #roms h2 {
+        font-size: 2.7rem;
+    }
+
+    #roms p {
+        font-size: 1.5rem;
+    }
+
+    /* Cartões */
+
+    #listerom .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .card {
+        margin-right: 25px;
+    }
+
+    /* Contato */
+
+    #contato {
+        background-attachment: fixed;
+    }
+
+    #contato p {
+        font-size: 1.5rem;
+    }
+
+    /* Rodapé */
+
+    #fim {
+        text-align: center;
+    }
+
+    #fim p {
+        font-size: 1.5rem;
+    }
+
+    #fim img {
+        margin-left: 200px;
+    }
+
+    #fim .icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+}
+
+#fim a {
+    display: inline-block;
+}
+
+#texto {
+    text-align: center;
+}
+
+}
+
+/* Fim - Tablet Landscape <<<<<<<<<< */
+
+
+/* Notebook / PC >>>>>>>>>>>>>>>>>>> */
+@media (min-width: 1200px) {
+
+    /* Layout */
+    .container {
+        max-width: 1140px;
+        justify-content: space-between;
+    }
+
+    /* Cabeçalho */
+    header {
+        height: 100px;
+    }
+
+    #logo img {
+        width: 194px;
+        height: 194px;
+    }
+
+    label {
+        display: none;
+    }
+
+    nav ul {
+        position: static;
+        width: 100%;
+        height: auto;
+        background-color: transparent;
+        margin-top: 20px;
+    }
+
+    nav ul li {
+        border: 0;
+        float: left;
+    }
+
+    nav ul li a:hover {
+        color: var(--Branco);
+    }
+
+    /* Principal */
+    main {
+        height: 85vh;
+    }
+
+    /* Destaque */
+
+    #hero img {
+        width: 400px;
+        height: 400px;
+    }
+
+    .topics {
+        display: flex;
+    }
+
+    /* onepage */
+
+    #onepage .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #onepage h2 {
+        font-size: 2.7rem;
+    }
+
+    #onepage p {
+        font-size: 1.5rem;
+    }
+
+    #video iframe {
+        width: 560px;
+        height: 315px;
+        margin-left: 20px;
+    }
+
+    /* Roms */
+
+    #roms {
+        background-attachment: fixed;
+    }
+
+    #roms .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #roms img {
+        display: flex;
+        border-radius: 20%;
+        height: 250px;
+        width: 250px;
+    }
+
+    #roms .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #roms #sobre h2 {
+        font-size: 2.7rem;
+    }
+
+    #roms #sobre p {
+        font-size: 2.5rem;
+    }
+
+    /* Contato */
+
+    #contato {
+        background-attachment: fixed;
+    }
+
+    #contato .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #Discord img {
+        display: flex;
+        float: right;
+        border-radius: 20%;
+        height: 250px;
+        width: 250px;
+        margin-right: 200px;
+    }
+
+    /* Rodapé */
+
+    #fim p {
+        font-size: 1.5rem;
+    }
+
+    #fim img {
+        margin-right: 150px;
+        display: flex;
+        float: right;
+        border-radius: 200%;
+    }
+
+    #fim .icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+}
+
+#fim a {
+    display: inline-block;
+}
+
+#texto {
+    text-align: center;
+}
+
+}
+
+/* Fim - Notebook / PC <<<<<<<<<<<< */
+
+
+/* Full HD / 4K >>>>>>>>>>>>>>>>>>> */
+@media (min-width: 1400px) {
+
+    #onepage .container {
+        flex-direction: row;
+    }
+
+    /* Layout */
+    .container {
+        max-width: 1320px;
+    }
+
+    /* Principal */
+    main h1 {
+        font-size: 6rem;
+    }
+
+    main h2 {
+        font-size: 4rem;
+    }
+
+    #onepage h2 {
+        font-size: 2.7rem;
+    }
+
+    #onepage p {
+        font-size: 1.5rem;
+    }
+
+    #video iframe {
+        width: 560px;
+        height: 315px;
+        margin-left: 20px;
+    }
+}
+
+/* Fim - Full HD / 4K <<<<<<<<<<<< */
